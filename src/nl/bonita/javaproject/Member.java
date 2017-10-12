@@ -1,45 +1,54 @@
 package nl.bonita.javaproject;
 
 public class Member {
-    private char memberType;
-    private int memberID;
-    private String name;
-    private double fees;
 
-    public Member(char pMemberType, int pMemberID, String pName, double pFees) {
-        memberType = pMemberType;
-        memberID = pMemberID;
-        name = pName;
-        fees = pFees;
-    }
+  private char memberType;
+  private int memberID;
+  private String name;
+  private double fees;
 
-    public void setMemberType(char pMemberType) {
-        memberType = pMemberType;
-    }
-    public char getMemberType() {
-        return memberType;
-    }
-    public void setMemberID(int pMemberID) {
-        memberID = pMemberID;
-    }
-    public int getMemberID() {
-        return memberID;
-    }
-    public void setName(String pName) {
-        name = pName;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setFees(double pFees) {
-        fees = pFees;
-    }
-    public double getFees(){
-        return fees;
-    }
+  //Parameters met prefixen met p is een beetje ouderwets en niet nodig. Mag gewoon hetzelfde heten.
+  public Member(char memberType, int pMemberID, String pName, double pFees) {
+    this.memberType = memberType; //Al ze hetzelfde heten moet je this.memberType gebruiken om de global variable te benaderen.
+    memberID = pMemberID;
+    name = pName;
+    fees = pFees;
+  }
 
-    @Override
-    public String toString(){
-        return memberType + ", " + memberID + ", " + name + ", " + fees;
-    }
+  public char getMemberType() {
+    return memberType;
+  }
+
+  public void setMemberType(char pMemberType) {
+    memberType = pMemberType;
+  }
+
+  public int getMemberID() {
+    return memberID;
+  }
+
+  public void setMemberID(int pMemberID) {
+    memberID = pMemberID;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String pName) {
+    name = pName;
+  }
+
+  public double getFees() {
+    return fees;
+  }
+
+  public void setFees(double pFees) {
+    fees = pFees;
+  }
+
+  @Override
+  public String toString() {
+    return memberType + ", " + memberID + ", " + name + ", " + fees;
+  }
 }

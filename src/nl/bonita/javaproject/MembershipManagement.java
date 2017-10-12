@@ -47,6 +47,10 @@ public class MembershipManagement {
         return choice;
     }
 
+    //Voor deze methode geldt ook:
+    // Duidelijke namen gebruiken voor variable, geen afkortingen.
+    // Variabelen declareren wanneer ze nodig zijn. Niet allemaal aan het begin van de methode.
+    // Integers in een switch statement vervangen voor constanten om de leesbaarheid te vergroten.
     public String addMembers(LinkedList<Member> m){
         String name;
         int club;
@@ -71,7 +75,7 @@ public class MembershipManagement {
             memberID = 1;
         if (club != 4)
         {
-            cal = (n) -> {
+            cal = (n) -> { //Haakjes om 'n' zijn niet nodig. 'n' is een onduidelijke naam.
                 switch (n)
                 {
                     case 1:
@@ -90,7 +94,7 @@ public class MembershipManagement {
             mem = mbr.toString();
             System.out.println("\nSTATUS: Single Club Member added \n");
         } else {
-            cal = (n) -> {
+            cal = (n) -> { //Haakjes om 'n' zijn niet nodig. 'n' is een onduidelijke naam.
                 if (n == 4)
                     return 1200;
                 else {
